@@ -20,7 +20,9 @@ platforms :ruby do
 end
 
 platforms :jruby do
-  gem 'jruby-openssl', '~> 0.7'
+  gem 'jruby-openssl'
+  # Once these changes get merged I'll set this to the aesterline's repo
+  gem 'jruby-httpclient', :git => 'https://github.com/aesterline/jruby-httpclient.git', :ref => 'ebb9b6e', :require => false, :platforms => :jruby
   gem 'ffi-ncurses', '~> 0.3'
 end
 
